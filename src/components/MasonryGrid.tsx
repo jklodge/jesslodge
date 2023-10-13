@@ -36,7 +36,7 @@ const MasonryGrid = () => {
   useEffect(() => {
     setTimeout(() => {
       setHasLoaded(true);
-    }, 500)
+    }, 1000)
     window.addEventListener("scroll", onScroll);
     // remove event on unmount to prevent a memory leak with the cleanup
     return () => {
@@ -189,10 +189,14 @@ const ImageContainer = styled(Link)`
   box-shadow: 0 0 5px #ccc;
   margin: 30px 10px;
   height: fit-content;
+  max-width: 400px;
   &:hover {
     transform: scale(1.1);
   }
   transition: all 0.3s ease-in-out;
+  @media only screen and (max-width: 1800px) {
+    max-width: 365px;
+  }
 `
 
 const TextContainer = styled.div`

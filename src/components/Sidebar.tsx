@@ -56,7 +56,7 @@ import Link from "next/link"
        window.removeEventListener("scroll", onScroll);
     }
   }, [])
-const isMobileDeviceOrScreen = isMobileScren || isMobile
+const isMobileDeviceOrScreen = isMobileScren || isMobile;
   return (
     <Container className="columns-1 md:columns-1 lg:columns-1">
       <Link  href="/">
